@@ -1,1 +1,26 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-split-pane>
+    <ion-menu [content]="content" id="loggedInMenu">
+        
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-list>
+                <ion-item menuClose (click)="logout()">
+                    Logout
+                </ion-item>
+                <ion-item menuClose (click)="showSettings()">
+                    Settings
+                </ion-item>
+                <ion-item>
+                    {{appName}} Ver: {{appVer}}
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+            
+    <ion-nav [root]="rootPage" #content swipe-back-enabled="false" main name="app"></ion-nav>
+</ion-split-pane>

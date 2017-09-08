@@ -1,0 +1,5 @@
+<ion-tabs name="tabItems" color="primary">
+    <ion-tab [root]="pendingRoot" [rootParams]="pendingParams" tabTitle="Pending" tabIcon="list" tabsHideOnSubPages="true"></ion-tab>
+    <ion-tab [root]="scheduledRoot" [rootParams]="scheduledParams" tabTitle="Scheduled" tabIcon="calendar" tabsHideOnSubPages="true"></ion-tab>
+    <ion-tab [root]="completedRoot" [rootParams]="completedParams" tabTitle="Completed" tabIcon="checkbox-outline" tabsHideOnSubPages="true"></ion-tab>
+</ion-tabs>

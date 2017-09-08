@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <!-- <ion-buttons start>
+      <button ion-button icon-left>
+        <ion-icon name="arrow-back"></ion-icon>
+        Back
+      </button>
+    </ion-buttons> -->
+    <ion-title>cap detail</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save()">Save</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Title
+      </ion-label>
+      <ion-input type="text" placeholder="" name="title"></ion-input>
+    </ion-item>
+    <ion-item color="none" id="capDetail-list-item9">
+      Asset
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" id="capDetail-list-item10">
+      Location
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item id="capDetail-select1">
+      <ion-label>Priority</ion-label>
+      <ion-select name="priority" [(ngModel)]='capItem.priority'>
+          <ion-option value="High">High</ion-option>
+          <ion-option value="Medium" checked="true">Medium</ion-option>
+          <ion-option value="Low">Low</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item id="capDetail-select2">
+      <ion-label>Severity</ion-label>
+      <ion-select name="severity" [(ngModel)]='capItem.severity'>
+          <ion-option value="High">High</ion-option>
+          <ion-option value="Medium" checked="true">Medium</ion-option>
+          <ion-option value="Low">Low</ion-option>        
+      </ion-select>
+    </ion-item>
+    <ion-item id="capDetail-toggle1">
+      <ion-label>
+        Is Safety Related
+      </ion-label>
+      <ion-toggle color="positive" checked="false"></ion-toggle>
+    </ion-item>
+    
+    <ion-item color="none">
+      <ion-label>Status</ion-label>
+      <ion-note item-end>{{capItem.status}}</ion-note>
+    </ion-item>
+
+    <ion-item id="capDetail-input5">
+      <ion-label>
+        Description
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+  </ion-list>
+  <button id="capDetail-button2" ion-button color="positive" block style="border-radius:0px 0px 0px 0px;">
+    <ion-icon name="camera"></ion-icon>
+  </button>
+</ion-content>
